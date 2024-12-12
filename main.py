@@ -50,7 +50,27 @@ def sidebar_navigation():
 # Define the content for each page
 def account_detail():
     st.title("Account Detail")
-    st.write("Welcome to the Home page!")
+    
+    # Input box for entering ID
+    user_id = st.text_input("Enter ID:")
+
+    # Simulated user data
+    user_data = {
+        "1": {"name": "John", "surname": "Doe", "email": "john.doe@example.com", "alive": True},
+        "2": {"name": "Jane", "surname": "Smith", "email": "jane.smith@example.com", "alive": False},
+    }
+
+    if user_id:
+        user_info = user_data.get(user_id, None)
+
+        if user_info:
+            st.write(f"**Name:** {user_info['name']}")
+            st.write(f"**Surname:** {user_info['surname']}")
+            st.write(f"**Email:** {user_info['email']}")
+            st.write(f"**Alive:** {'Yes' if user_info['alive'] else 'No'}")
+        else:
+            st.error("No user found with this ID.")
+
 
 def contact():
     st.title("Contact")
