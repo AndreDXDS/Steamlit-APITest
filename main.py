@@ -1,5 +1,6 @@
 import streamlit as st
 
+# Define a function to display the login screen
 def login():
     st.title("Login")
     username = st.text_input("Username")
@@ -12,12 +13,24 @@ def login():
         else:
             st.error("Invalid username or password")
 
-# Define the sidebar navigation
-def sidebar_navigation():
-    with st.sidebar:
-        st.header("Navigation")
-        selected_page = st.radio("Go to:", ["Home", "About", "Settings"])
-        return selected_page
+# Define the tile-based navigation
+def tile_navigation():
+    st.header("Navigation")
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        if st.button("Home"):
+            return "Home"
+
+    with col2:
+        if st.button("About"):
+            return "About"
+
+    with col3:
+        if st.button("Settings"):
+            return "Settings"
+
+    return None
 
 # Define the content for each page
 def home():
@@ -39,7 +52,7 @@ if "authenticated" not in st.session_state:
 if not st.session_state["authenticated"]:
     login()
 else:
-    selected_page = sidebar_navigation()
+    selected_page = tile_navigation()
 
     if selected_page == "Home":
         home()
