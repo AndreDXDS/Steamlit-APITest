@@ -13,21 +13,12 @@ def login():
         else:
             st.error("Invalid username or password")
 
-# Define the sidebar navigation with stacked buttons
+# Define the sidebar navigation
 def sidebar_navigation():
     with st.sidebar:
         st.header("Navigation")
-
-        if st.button("Home", key="home_button"):
-            return "Home"
-
-        if st.button("About", key="about_button"):
-            return "About"
-
-        if st.button("Settings", key="settings_button"):
-            return "Settings"
-
-        return None
+        selected_page = st.radio("Go to:", ["Home", "About", "Settings"])
+        return selected_page
 
 # Define the content for each page
 def home():
