@@ -13,23 +13,19 @@ def login():
         else:
             st.error("Invalid username or password")
 
-# Define the sidebar navigation with tiles
+# Define the sidebar navigation with stacked buttons
 def sidebar_navigation():
     with st.sidebar:
         st.header("Navigation")
-        col1, col2 = st.columns(2)
 
-        with col1:
-            if st.button("Home"):
-                return "Home"
-        with col2:
-            if st.button("About"):
-                return "About"
+        if st.button("Home", key="home_button"):
+            return "Home"
 
-        col3, col4 = st.columns(2)
-        with col3:
-            if st.button("Settings"):
-                return "Settings"
+        if st.button("About", key="about_button"):
+            return "About"
+
+        if st.button("Settings", key="settings_button"):
+            return "Settings"
 
         return None
 
