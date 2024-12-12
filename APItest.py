@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Base URL of the Flask API
-BASE_URL = "https://34fbab0ac85720ba79864f10d77036a2.serveo.net"
+BASE_URL = "https://a89bca486b25c08f21cbe62b6206fc5b.serveo.net"
 
 # Streamlit App
 st.title("Flask API Client")
