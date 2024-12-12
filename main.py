@@ -27,17 +27,24 @@ def login():
         else:
             st.error("Invalid username or password")
 
-# Define the sidebar navigation with normal buttons
+# Define the sidebar navigation with dynamic buttons
 def sidebar_navigation():
     with st.sidebar:
         st.header("Navigation")
-        if st.button("Home"):
-            return "Home"
-        if st.button("About"):
-            return "About"
-        if st.button("Settings"):
-            return "Settings"
-        return None
+
+        if "selected_page" not in st.session_state:
+            st.session_state["selected_page"] = "Home"
+
+        if st.session_state["selected_page"] != "Home" and st.button("Home"):
+            st.session_state["selected_page"] = "Home"
+
+        if st.session_state["selected_page"] != "About" and st.button("About"):
+            st.session_state["selected_page"] = "About"
+
+        if st.session_state["selected_page"] != "Settings" and st.button("Settings"):
+            st.session_state["selected_page"] = "Settings"
+
+        return st.session_state["selected_page"]
 
 # Define the content for each page
 def home():
