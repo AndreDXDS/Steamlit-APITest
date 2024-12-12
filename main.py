@@ -13,24 +13,25 @@ def login():
         else:
             st.error("Invalid username or password")
 
-# Define the tile-based navigation
-def tile_navigation():
-    st.header("Navigation")
-    col1, col2, col3 = st.columns(3)
+# Define the sidebar navigation with tiles
+def sidebar_navigation():
+    with st.sidebar:
+        st.header("Navigation")
+        col1, col2 = st.columns(2)
 
-    with col1:
-        if st.button("Home"):
-            return "Home"
+        with col1:
+            if st.button("Home"):
+                return "Home"
+        with col2:
+            if st.button("About"):
+                return "About"
 
-    with col2:
-        if st.button("About"):
-            return "About"
+        col3, col4 = st.columns(2)
+        with col3:
+            if st.button("Settings"):
+                return "Settings"
 
-    with col3:
-        if st.button("Settings"):
-            return "Settings"
-
-    return None
+        return None
 
 # Define the content for each page
 def home():
@@ -52,7 +53,7 @@ if "authenticated" not in st.session_state:
 if not st.session_state["authenticated"]:
     login()
 else:
-    selected_page = tile_navigation()
+    selected_page = sidebar_navigation()
 
     if selected_page == "Home":
         home()
