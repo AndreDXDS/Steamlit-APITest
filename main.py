@@ -48,3 +48,9 @@ else:
         about()
     elif selected_page == "Settings":
         settings()
+
+
+section[data-testid="stSidebar"] div.stButton button {
+    background-color: brown;
+    width: 200px;
+}
