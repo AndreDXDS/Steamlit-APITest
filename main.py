@@ -1,5 +1,19 @@
 import streamlit as st
 
+# Inject custom CSS for wide buttons
+def set_css():
+    st.markdown(
+        """
+        <style>
+        .stButton > button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
 # Define a function to display the login screen
 def login():
     st.title("Login")
@@ -13,12 +27,17 @@ def login():
         else:
             st.error("Invalid username or password")
 
-# Define the sidebar navigation
+# Define the sidebar navigation with normal buttons
 def sidebar_navigation():
     with st.sidebar:
         st.header("Navigation")
-        selected_page = st.radio("Go to:", ["Home", "About", "Settings"])
-        return selected_page
+        if st.button("Home"):
+            return "Home"
+        if st.button("About"):
+            return "About"
+        if st.button("Settings"):
+            return "Settings"
+        return None
 
 # Define the content for each page
 def home():
@@ -37,6 +56,8 @@ def settings():
 if "authenticated" not in st.session_state:
     st.session_state["authenticated"] = False
 
+set_css()
+
 if not st.session_state["authenticated"]:
     login()
 else:
@@ -48,4 +69,3 @@ else:
         about()
     elif selected_page == "Settings":
         settings()
-
