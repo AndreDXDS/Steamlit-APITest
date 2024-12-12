@@ -33,30 +33,30 @@ def sidebar_navigation():
         st.header("Navigation")
 
         if "selected_page" not in st.session_state:
-            st.session_state["selected_page"] = "Account Detail"
+            st.session_state["selected_page"] = "AccountDetail"
 
-        if st.button("Home"):
-            st.session_state["selected_page"] = "Home"
+        if st.button("Account Detail"):
+            st.session_state["selected_page"] = "AccountDetail"
 
         if st.button("Contact"):
-            st.session_state["selected_page"] = "About"
+            st.session_state["selected_page"] = "Contact"
 
         if st.button("Enquiries"):
-            st.session_state["selected_page"] = "Settings"
+            st.session_state["selected_page"] = "Enquiries"
 
         return st.session_state["selected_page"]
 
 # Define the content for each page
 def account_detail():
-    st.title("Home")
+    st.title("Account Detail")
     st.write("Welcome to the Home page!")
 
 def contact():
-    st.title("About")
+    st.title("Contact")
     st.write("This is the About page. Learn more about the application here.")
 
 def enquiries():
-    st.title("Settings")
+    st.title("Enquiries")
     st.write("Adjust your preferences in the Settings page.")
 
 # Main app logic
@@ -70,9 +70,9 @@ if not st.session_state["authenticated"]:
 else:
     selected_page = sidebar_navigation()
 
-    if selected_page == "Home":
+    if selected_page == "AccountDetail":
         account_detail()
-    elif selected_page == "About":
+    elif selected_page == "Contact":
         contact()
-    elif selected_page == "Settings":
+    elif selected_page == "Enquiries":
         enquiries()
