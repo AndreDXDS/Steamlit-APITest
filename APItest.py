@@ -18,7 +18,7 @@ if st.button("Fetch All Data"):
         st.error(f"Error: {response.status_code} - {response.json().get('error', 'Unknown error')}")
 
 # Input to fetch a specific entry by ID
-st.subheader("Fetch Data by ID")
+st.subheader("Fetch Data by ID andre")
 entry_id = st.number_input("Enter ID", min_value=1, step=1)
 if st.button("Fetch by ID"):
     response = requests.get(f"{BASE_URL}/data/{entry_id}")
