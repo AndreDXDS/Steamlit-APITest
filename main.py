@@ -27,35 +27,35 @@ def login():
         else:
             st.error("Invalid username or password")
 
-# Define the sidebar navigation with dynamic buttons
+# Define the sidebar navigation with static buttons
 def sidebar_navigation():
     with st.sidebar:
         st.header("Navigation")
 
         if "selected_page" not in st.session_state:
+            st.session_state["selected_page"] = "Account Detail"
+
+        if st.button("Home"):
             st.session_state["selected_page"] = "Home"
 
-        if st.session_state["selected_page"] != "Home" and st.button("Home"):
-            st.session_state["selected_page"] = "Home"
-
-        if st.session_state["selected_page"] != "About" and st.button("About"):
+        if st.button("Contact"):
             st.session_state["selected_page"] = "About"
 
-        if st.session_state["selected_page"] != "Settings" and st.button("Settings"):
+        if st.button("Enquiries"):
             st.session_state["selected_page"] = "Settings"
 
         return st.session_state["selected_page"]
 
 # Define the content for each page
-def home():
+def account_detail():
     st.title("Home")
     st.write("Welcome to the Home page!")
 
-def about():
+def contact():
     st.title("About")
     st.write("This is the About page. Learn more about the application here.")
 
-def settings():
+def enquiries():
     st.title("Settings")
     st.write("Adjust your preferences in the Settings page.")
 
@@ -71,8 +71,8 @@ else:
     selected_page = sidebar_navigation()
 
     if selected_page == "Home":
-        home()
+        account_detail()
     elif selected_page == "About":
-        about()
+        contact()
     elif selected_page == "Settings":
-        settings()
+        enquiries()
