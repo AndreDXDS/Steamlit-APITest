@@ -1,6 +1,7 @@
 import streamlit as st
 
 st.set_page_config(layout="wide")
+st.set_page_config(initial_sidebar_state="collapsed")
 # Inject custom CSS for wide buttons
 def set_css():
     st.markdown(
@@ -17,7 +18,6 @@ def set_css():
 
 # Define a function to display the login screen
 def login():
-    st.set_page_config(initial_sidebar_state="collapsed")
     st.title("Login")
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
