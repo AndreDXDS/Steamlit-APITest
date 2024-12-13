@@ -14,7 +14,8 @@ def set_css():
         """,
         unsafe_allow_html=True,
     )
-
+def refresh():
+    Server.get_current()._reloader.reload()
 # Define a function to display the login screen
 def login():
     st.title("Login")
@@ -101,7 +102,7 @@ else:
     elif selected_page == "Enquiries":
         enquiries()
     elif selected_page == "Logout":
-        login()
+        refresh()
 
 
 
