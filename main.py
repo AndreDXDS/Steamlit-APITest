@@ -45,6 +45,9 @@ def sidebar_navigation():
         if st.button("Enquiries"):
             st.session_state["selected_page"] = "Enquiries"
 
+        if st.button("Logout"):
+            st.session_state["selected_page"] = "Logout"        
+
         return st.session_state["selected_page"]
 
 # Define the content for each page
@@ -97,3 +100,9 @@ else:
         contact()
     elif selected_page == "Enquiries":
         enquiries()
+    elif selected_page == "Logout":
+        login()
+
+
+
+
