@@ -102,7 +102,7 @@ else:
     elif selected_page == "Enquiries":
         enquiries()
     elif selected_page == "Logout":
-        refresh_state()
+        login()
 
 
 
