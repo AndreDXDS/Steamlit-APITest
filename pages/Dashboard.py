@@ -46,17 +46,17 @@ with st.container(border=True):
     with col10:
         st.selectbox("Property Phones",("Yes","No"))
 
-# col5, col6, col7, col8, col9, col10 = st.columns(6)
+col11, col12, col13, col14, col15, col116 = st.columns(6)
 
-# with col5:
-#     st.metric(label="Universe", value="58 M", border=True)
-# with col6:
-#     st.metric(label="Cell Phone", value="19 M", border=True)
-# with col7:
-#     st.metric(label="Home Phone", value="19 M", border=True)
-# with col8:
-#     st.metric(label="Work Phone", value="19 M", border=True)
-# with col9:
-#     st.metric(label="Qualifications", value="5 M", border=True)
-# with col10:
-#     st.metric(label="Debtors", value="4 M", border=True)
+with col11:
+    st.metric(label="Universe", value="58 M", border=True)
+with col12:
+    st.metric(label="Cell Phone", value="19 M", border=True)
+with col13:
+    st.metric(label="Home Phone", value="19 M", border=True)
+with col14:
+    st.metric(label="Work Phone", value="19 M", border=True)
+with col15:
+    st.metric(label="Qualifications", value="5 M", border=True)
+with col116:
+    st.metric(label="Debtors", value="4 M", border=True)
