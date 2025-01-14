@@ -60,3 +60,7 @@ with col15:
     st.metric(label="Qualifications", value="5 M", border=True)
 with col116:
     st.metric(label="Debtors", value="4 M", border=True)
+
+chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
+
+st.line_chart(chart_data)
