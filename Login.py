@@ -13,9 +13,7 @@ def set_css():
         """,
         unsafe_allow_html=True,
     )
-def refresh_state():
-    st.session_state.refresh += 1
-# Define a function to display the login screen
+    
 def login():
     st.title("Login")
     username = st.text_input("Username")
@@ -27,3 +25,5 @@ def login():
             st.success("Login successful!")
         else:
             st.error("Invalid username or password")
+
+login()
