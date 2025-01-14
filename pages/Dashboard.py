@@ -1,7 +1,8 @@
 import streamlit as st
 import Modules as md
 
-# Inject custom CSS for wide buttons
+st.set_page_config(layout="wide")
+
 st.markdown(
     """
     <style>
