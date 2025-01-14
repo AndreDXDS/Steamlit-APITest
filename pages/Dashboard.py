@@ -30,17 +30,37 @@ with col4:
     if st.button("Logout", use_container_width=True):
         st.switch_page("Login.py")
 
-col5, col6, col7, col8, col9, col10 = st.columns(6)
+with st.container(border=True):
+    col5, col6, col7, col8, col9, col10 = st.columns(6)
 
-with col5:
-    st.metric(label="Universe", value="58 M", border=True)
-with col6:
-    st.metric(label="Cell Phone", value="19 M", border=True)
-with col7:
-    st.metric(label="Home Phone", value="19 M", border=True)
-with col8:
-    st.metric(label="Work Phone", value="19 M", border=True)
-with col9:
-    st.metric(label="Qualifications", value="5 M", border=True)
-with col10:
-    st.metric(label="Debtors", value="4 M", border=True)
+    option = st.selectbox(
+    "How would you like to be contacted?",
+    ("Email", "Home phone", "Mobile phone"))
+
+    with col5:
+        st.write("You selected:", option)
+    with col6:
+        st.write("You selected:", option)
+    with col7:
+        st.write("You selected:", option)
+    with col8:
+        st.write("You selected:", option)
+    with col9:
+        st.write("You selected:", option)
+    with col10:
+        st.write("You selected:", option)
+
+# col5, col6, col7, col8, col9, col10 = st.columns(6)
+
+# with col5:
+#     st.metric(label="Universe", value="58 M", border=True)
+# with col6:
+#     st.metric(label="Cell Phone", value="19 M", border=True)
+# with col7:
+#     st.metric(label="Home Phone", value="19 M", border=True)
+# with col8:
+#     st.metric(label="Work Phone", value="19 M", border=True)
+# with col9:
+#     st.metric(label="Qualifications", value="5 M", border=True)
+# with col10:
+#     st.metric(label="Debtors", value="4 M", border=True)
