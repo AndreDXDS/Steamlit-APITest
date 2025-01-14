@@ -33,12 +33,12 @@ col5, col6, col7, col8, col9, col10 = st.columns(6)
 with col5:
     st.metric(label="Universe", value="58 M", border=True)
 with col6:
-    st.metric(label="Universe", value="58 M", border=True)
+    st.metric(label="Cell Phone", value="19 M", border=True)
 with col7:
-    st.metric(label="Universe", value="58 M", border=True)
+    st.metric(label="Home Phone", value="19 M", border=True)
 with col8:
-    st.metric(label="Universe", value="58 M", border=True)
+    st.metric(label="Work Phone", value="19 M", border=True)
 with col9:
-    st.metric(label="Universe", value="58 M", border=True)
+    st.metric(label="Qualifications", value="5 M", border=True)
 with col10:
-    st.metric(label="Universe", value="58 M", border=True)
+    st.metric(label="Debtors", value="4 M", border=True)
