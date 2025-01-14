@@ -34,17 +34,17 @@ with st.container(border=True):
     col5, col6, col7, col8, col9, col10 = st.columns(6)
     
     with col5:
-        st.selectbox("How would you like to be contacted?",("Email", "Home phone", "Mobile phone"))
+        st.selectbox("Cell Phones",("Yes","No"))
     with col6:
-        st.selectbox("How would you like to be contacted?",("Email", "Home phone", "Mobile phone"))
+        st.selectbox("Home Phones",("Yes","No"))
     with col7:
-        st.selectbox("How would you like to be contacted?",("Email", "Home phone", "Mobile phone"))
+        st.selectbox("Work Phones",("Yes","No"))
     with col8:
-        st.selectbox("How would you like to be contacted?",("Email", "Home phone", "Mobile phone"))
+        st.selectbox("Qualifications Phones",("Yes","No"))
     with col9:
-        st.selectbox("How would you like to be contacted?",("Email", "Home phone", "Mobile phone"))
+        st.selectbox("Debtors Phones",("Yes","No"))
     with col10:
-        st.selectbox("How would you like to be contacted?",("Email", "Home phone", "Mobile phone"))
+        st.selectbox("Property Phones",("Yes","No"))
 
 # col5, col6, col7, col8, col9, col10 = st.columns(6)
 
