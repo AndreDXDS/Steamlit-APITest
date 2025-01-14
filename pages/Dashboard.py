@@ -32,23 +32,19 @@ with col4:
 
 with st.container(border=True):
     col5, col6, col7, col8, col9, col10 = st.columns(6)
-
-    option = st.selectbox(
-    "How would you like to be contacted?",
-    ("Email", "Home phone", "Mobile phone"))
-
+    
     with col5:
-        st.write("You selected:", option)
+        st.selectbox("How would you like to be contacted?",("Email", "Home phone", "Mobile phone"))
     with col6:
-        st.write("You selected:", option)
+        st.selectbox("How would you like to be contacted?",("Email", "Home phone", "Mobile phone"))
     with col7:
-        st.write("You selected:", option)
+        st.selectbox("How would you like to be contacted?",("Email", "Home phone", "Mobile phone"))
     with col8:
-        st.write("You selected:", option)
+        st.selectbox("How would you like to be contacted?",("Email", "Home phone", "Mobile phone"))
     with col9:
-        st.write("You selected:", option)
+        st.selectbox("How would you like to be contacted?",("Email", "Home phone", "Mobile phone"))
     with col10:
-        st.write("You selected:", option)
+        st.selectbox("How would you like to be contacted?",("Email", "Home phone", "Mobile phone"))
 
 # col5, col6, col7, col8, col9, col10 = st.columns(6)
 
