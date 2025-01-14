@@ -1,6 +1,8 @@
 import streamlit as st
 import Modules as md
 
+st.set_page_config(layout="wide")
+
 st.markdown(
     """
     <style>
