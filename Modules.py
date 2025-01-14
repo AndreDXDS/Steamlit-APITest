@@ -9,7 +9,7 @@ def login():
         if username == "admin" and password == "password":
             st.session_state["authenticated"] = True
             st.success("Login successful!")
-            st.switch_page("Pages/Dashboard.py")
+            st.switch_page("Pages\Dashboard.py")
         else:
             st.error("Invalid username or password")
 
