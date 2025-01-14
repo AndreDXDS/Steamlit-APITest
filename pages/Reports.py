@@ -19,7 +19,7 @@ col1, col2 = st.columns([2,4])
 with col1:
     st.title("Reports")
     
-    if st.button("Enquiries"):
+    if st.button("Enquiries", use_container_width=True):
         st.switch_page("pages/Enquiries.py")
 with col2:
     st.write("")
