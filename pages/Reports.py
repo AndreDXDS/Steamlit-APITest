@@ -14,7 +14,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-col1, col2, col3 = st.columns([1,1,4])
+col1, col2, col3 = st.columns([1,1,5])
 
 with col1:
     st.title("Reports")
