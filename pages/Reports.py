@@ -19,7 +19,11 @@ col1, col2 = st.columns([1,4])
 with col1:
     st.title("Reports")
     
+    if st.button("Account details", use_container_width=True):
+        st.switch_page("pages/Enquiries.py")
     if st.button("Enquiries", use_container_width=True):
+        st.switch_page("pages/Enquiries.py")
+    if st.button("Contact", use_container_width=True):
         st.switch_page("pages/Enquiries.py")
 with col2:
     st.write("")
