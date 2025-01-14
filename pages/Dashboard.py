@@ -16,3 +16,8 @@ st.markdown(
 
 st.title("XDS Universe")
 
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.metric(label="Universe", value="58 M")
+
