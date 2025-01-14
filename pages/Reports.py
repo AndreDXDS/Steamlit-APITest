@@ -32,6 +32,5 @@ with col1:
 with col3:
     st.write("")
     st.write("")
-    st.write("")
     st.title("")
     st.write("XDS is a company specializing in a range of data products designed to help businesses leverage their data for insights and decision-making. Their offerings include data analytics tools, data integration platforms, and business intelligence solutions that enable companies to streamline data management, improve operational efficiency, and drive growth. XDS’s products are built with advanced technologies to ensure scalability, security, and ease of use for organizations across various industries.")
