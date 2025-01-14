@@ -28,7 +28,7 @@ with col4:
     if st.button("Logout", use_container_width=True):
         st.switch_page("Login.py")
 
-col5, col6, col7, col8, col9, col10 = st.columns(3)
+col5, col6, col7, col8, col9, col10 = st.columns(6)
 
 with col5:
     st.metric(label="Universe", value="58 M", border=True)
