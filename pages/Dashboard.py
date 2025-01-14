@@ -21,10 +21,12 @@ with col1:
     st.title("XDS Universe")
 
 with col3:
+    st.write("")
     if st.button("Reports", use_container_width=True):
         st.switch_page("pages/Reports.py")
 
 with col4:
+    st.write("")
     if st.button("Logout", use_container_width=True):
         st.switch_page("Login.py")
 
