@@ -25,5 +25,4 @@ with col2:
     st.write("")
     st.write("")
     st.write("")
-    if st.button("Reports", use_container_width=True):
-        st.switch_page("pages/Reports.py")
+    st.title("Enquiries")
