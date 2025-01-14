@@ -14,7 +14,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-col1, col2, col3 = st.columns([1,1,5])
+col1, col2 = st.columns([1,5])
 
 with col1:
     with st.container(border=True):
@@ -30,7 +30,7 @@ with col1:
             st.switch_page("pages/Dashboard.py")
         if st.button("Logout", use_container_width=True):
             st.switch_page("Login.py")
-with col3:
+with col2:
     with st.container(border=True):
         st.write("")
         st.write("")
