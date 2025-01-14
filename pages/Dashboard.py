@@ -28,15 +28,17 @@ with col4:
     if st.button("Logout", use_container_width=True):
         st.switch_page("Login.py")
 
+col5, col6, col7, col8, col9, col10 = st.columns(3)
 
-
-
-
-# col1, col2, col3 = st.columns(3)
-
-# with col1:
-#     st.metric(label="Universe", value="58 M", border=True)
-# with col2:
-#     st.metric(label="Universe", value="58 M", border=True)
-# with col3:
-#     st.metric(label="Universe", value="58 M", border=True)
+with col5:
+    st.metric(label="Universe", value="58 M", border=True)
+with col6:
+    st.metric(label="Universe", value="58 M", border=True)
+with col7:
+    st.metric(label="Universe", value="58 M", border=True)
+with col8:
+    st.metric(label="Universe", value="58 M", border=True)
+with col9:
+    st.metric(label="Universe", value="58 M", border=True)
+with col10:
+    st.metric(label="Universe", value="58 M", border=True)
