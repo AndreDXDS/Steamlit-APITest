@@ -1,7 +1,7 @@
 import streamlit as st
 import Modules as md
 
-st.set_page_config(layout="compact")
+st.set_page_config(layout="centered")
 
 st.markdown(
     """
