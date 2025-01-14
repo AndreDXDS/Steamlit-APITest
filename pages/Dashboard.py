@@ -14,13 +14,27 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("XDS Universe")
 
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.metric(label="Universe", value="58 M", border=True)
-with col2:
-    st.metric(label="Universe", value="58 M", border=True)
+    st.title("XDS Universe")
+
 with col3:
-    st.metric(label="Universe", value="58 M", border=True)
+    if st.button("Reports"):
+        st.write("Why hello there")
+
+
+
+
+
+
+
+# col1, col2, col3 = st.columns(3)
+
+# with col1:
+#     st.metric(label="Universe", value="58 M", border=True)
+# with col2:
+#     st.metric(label="Universe", value="58 M", border=True)
+# with col3:
+#     st.metric(label="Universe", value="58 M", border=True)
