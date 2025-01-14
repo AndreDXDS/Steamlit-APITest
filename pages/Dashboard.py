@@ -34,17 +34,17 @@ with st.container(border=True):
     col5, col6, col7, col8, col9, col10 = st.columns(6)
     
     with col5:
-        st.selectbox("Cell Phones",("Yes","No"))
+        st.selectbox("Cell Phones",("Yes","No"),index=None,placeholder="Please select to filter")
     with col6:
-        st.selectbox("Home Phones",("Yes","No"))
+        st.selectbox("Home Phones",("Yes","No"),index=None,placeholder="Please select to filter")
     with col7:
-        st.selectbox("Work Phones",("Yes","No"))
+        st.selectbox("Work Phones",("Yes","No"),index=None,placeholder="Please select to filter")
     with col8:
-        st.selectbox("Qualifications Phones",("Yes","No"))
+        st.selectbox("Qualifications Phones",("Yes","No"),index=None,placeholder="Please select to filter")
     with col9:
-        st.selectbox("Debtors Phones",("Yes","No"))
+        st.selectbox("Debtors Phones",("Yes","No"),index=None,placeholder="Please select to filter")
     with col10:
-        st.selectbox("Property Phones",("Yes","No"))
+        st.selectbox("Property Phones",("Yes","No"),index=None,placeholder="Please select to filter")
 
 col11, col12, col13, col14, col15, col116 = st.columns(6)
 
