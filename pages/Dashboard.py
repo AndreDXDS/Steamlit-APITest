@@ -15,16 +15,18 @@ st.markdown(
 )
 
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3 ,col4 = st.columns([1,2,1,1])
 
 with col1:
     st.title("XDS Universe")
 
 with col3:
     if st.button("Reports"):
-        st.write("Why hello there")
+        st.switch_page("pages/Reports.py")
 
-
+with col4:
+    if st.button("Logout"):
+        st.switch_page("Login.py")
 
 
 
