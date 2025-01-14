@@ -14,7 +14,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-col1, col2 = st.columns([1,4])
+col1, col2, col3 = st.columns([1,1,4])
 
 with col1:
     st.title("Reports")
@@ -25,7 +25,7 @@ with col1:
         st.switch_page("pages/Enquiries.py")
     if st.button("Contact", use_container_width=True):
         st.switch_page("pages/Enquiries.py")
-with col2:
+with col3:
     st.write("")
     st.write("")
     st.write("")
