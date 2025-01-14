@@ -25,6 +25,10 @@ with col1:
         st.switch_page("pages/Enquiries.py")
     if st.button("Contact", use_container_width=True):
         st.switch_page("pages/Enquiries.py")
+    if st.button("Dashboard", use_container_width=True):
+        st.switch_page("pages/Dashboard.py")
+    if st.button("Logout", use_container_width=True):
+        st.switch_page("Login.py")
 with col3:
     st.write("")
     st.write("")
